@@ -27,7 +27,7 @@ const settingscuentaNumber = document.getElementById('ajustes-numero-de-cuenta')
 let clientAuth = {
     user: "Admin",
     pass: "12345",
-    name: "Edwin Giraldo"
+    name: "Invitad@"
 };
 
 let clientsaldo = 112700.00; 
