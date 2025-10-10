@@ -1,4 +1,4 @@
-:root {
+x:root {
     --primary-color: #ff0000;
     --secondary-color: #f8f9fa;
     --background-color: #e9ecef;
@@ -258,7 +258,7 @@ a {
         top: 65px; 
         left: 0;
         width: 100%;
-        background-color: #0056b3; 
+        background-color: #ff0000; 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 999;
         transform: translateY(-100%); 
