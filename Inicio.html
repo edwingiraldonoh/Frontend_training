@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Regional</title>
+    <link rel="stylesheet" href="/Css/Inicio.css">
+</head>
+<body>
+    <main id="pagina-inicio" class="container activo">
+        <div class="tarjeta">
+            <h1>Banco Regional</h1>
+            <h2>Iniciar Sesión</h2>
+            <form id="formulario">
+                <label for="incio-user">Usuario:</label>
+                <input type="text" id="inicio-user" required>
+                <label for="inicio-password">Contraseña:</label>
+                <input type="password" id="inicio-password" required>
+                <button type="submit" id="boton-inicio">Entrar</button>
+                <p id="error-inicio" class="mensaje-error"></p>
+                <a href="#" id="alternar-registro">Regístrate</a>
+            </form>
+        </div>
+    </main>
+    
+    <main id="pagina-registro" class="container">
+        <div class="tarjeta">
+            <h1>Banco Regional</h1>
+            <h2>Crear Cuenta</h2>
+            <form id="formulario-regirstro">
+                <label for="registro-gmail">Gmail:</label>
+                <input type="email" id="registro-gmail" required>
+                <label for="registro-user">Usuario:</label>
+                <input type="text" id="registro-user" required>
+                <label for="registro-cuenta">Cuenta:</label>
+                <input type="text" id="registro-cuenta" required>
+                <label for="registro-password">Contraseña:</label>
+                <input type="password" id="registro-password" required>
+                <button type="submit">Registrarse</button>
+                <a href="#" id="alternar-inicio">Volver a Iniciar Sesión</a>
+            </form>
+        </div>
+    </main>
+
+    <div id="pagina-principal" class="oculto">
+        <header class="barra-de-navegacion">
+            <div class="logo">Banco Regional</div>
+            <nav id="navegacion-principal">
+                <a href="#" class="item-de-navegacion activo" data-content="inicio">Inicio</a> 
+                <a href="#" class="item-de-navegacion" data-content="transacciones">Transacciones</a>
+                <a href="#" class="item-de-navegacion" data-content="settings">Ajustes</a>
+                <a href="#" class="item-de-navegacion" id="boton-cerrar-sesion">Cerrar Sesión</a>
+            </nav>
+            <div class="alternar-menu" id="alternar-menu">☰</div>
+        </header>
+
+        <section class="main-content">
+            <h2>Bienvenido, <span id="nombre-de-cliente"></span></h2>
+
+            <div id="dynamic-content">
+                
+                <div id="content-inicio class="vista-contenedor activo-content">
+                    <div class="info-grid">
+                        <div class="info-tarjeta saldo">
+                            <h3>Saldo Disponible</h3>
+                            <p class="info-value" id="saldo-de-cliente">$ 112.700</p>
+                        </div>
+                        <div class="info-tarjeta cuenta">
+                            <h3>Número de Cuenta</h3>
+                            <p class="info-value" id="numero-de-cuenta">4578-9012-3456</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-transacciones" class="vista-contenedor">
+                    <h3>Realizar Transferencia</h3>
+                    <form id="fomulario-de-transaccion" class="fomulario-de-transaccion">
+                        <label for="cuenta-del-destinatario">Cuenta Destino:</label>
+                        <input type="text" id="cuenta-del-destinatario" required placeholder="Ingrese 12 dígitos">
+
+                        <label for="monto-de-transaccion">Monto:</label>
+                        <input type="number" id="monto-de-transaccion" step="0.01" min="0.01" required placeholder="$ 0.00">
+                        
+                        <p id="error-en-transaccion" class="mensaje-error"></p>
+                        <button type="submit">Enviar Dinero</button>
+                    </form>
+
+                    <div class="accion-de-actividad">
+                        <h3>Historial de Movimientos</h3>
+                        <ul id="historial-de-transacciones">
+                            </ul>
+                    </div>
+                </div>
+
+                <div id="content-settings" class="vista-contenedor">
+                    <h3>Cambiar Contraseña</h3>
+                    
+                    <form id="formulario-de-cambio-de-contraseña" class="fomulario-de-transaccion">
+                        <label for="vieja-contraseña">Contraseña Actual:</label>
+                        <input type="password" id="vieja-contraseña" required>
+
+                        <label for="nueva-contraseña">Nueva Contraseña:</label>
+                        <input type="password" id="nueva-contraseña" required minlength="5">
+                        <small>Mínimo 5 caracteres.</small>
+
+                        <label for="confirmar-contraseña">Confirmar Nueva Contraseña:</label>
+                        <input type="password" id="confirmar-contraseña" required>
+                        
+                        <p id="contraseña-erronea" class="mensaje-error"></p>
+                        <button type="submit">Actualizar Contraseña</button>
+                    </form>
+
+                    <div class="info-tarjeta cuenta" style="margin-top: 30px;">
+                        <h3>Información de la Cuenta</h3>
+                        <p>Nombre: <span id="ajustes-de-nombre-de-cliente"></span></p>
+                        <p>Cuenta: <span id="ajustes-numero-de-cuenta">4578-9012-3456</span></p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+    </div>
+
+    <script src="/Js/Inicio.js"></script>
+</body>
+</html>
