@@ -112,7 +112,7 @@ a {
 /*ESTILOS DEL DASHBOARD Y NAVEGACIÓN */
 .oculto { display: none !important; }
 
-#pagina-principal {
+#panel-de-control {
     width: 100%;
     min-height: 100vh;
 }
@@ -247,7 +247,7 @@ a {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- MEDIA QUERIES (DISEÑO RESPONSIVO) --- */
+/*MEDIA QUERIES*/
 @media (max-width: 768px) {
     body { align-items: flex-start; }
     
@@ -258,7 +258,7 @@ a {
         top: 65px; 
         left: 0;
         width: 100%;
-        background-color: #0056b3; 
+        background-color: #ff0000; 
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         z-index: 999;
         transform: translateY(-100%); 
